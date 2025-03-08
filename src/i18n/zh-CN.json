@@ -1,0 +1,124 @@
+{
+  "app": {
+    "name": "浮望",
+    "title_description": "口袋中的 AI 工具。",
+    "description": "是一个 AI 对话聊天工具。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "什么是浮望？",
+        "answer": "浮望是一个用 Swift 和 UIKit 构建的原生 AI 客户端。它为与各种 AI 语言模型交互提供了轻量级、注重隐私的界面。\n\n凭借其极速的文本渲染和 Markdown 支持，浮望提供流畅响应的 AI 对话体验。",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
+        "link_text": "了解更多"
+      },
+      {
+        "question": "浮望支持哪些 AI 模型？",
+        "answer": "我们为每位从 App Store 下载浮望的用户提供免费的云端模型，以提供便利。您可以在隐私页面了解服务提供商。这个配置由云端控制，无法修改。\n\n此外，浮望支持企业级接口。",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/advanced_settings/enterprise.html",
+        "link_text": "了解更多"
+      },
+      {
+        "question": "我的数据受到保护吗？",
+        "answer": "是的，隐私是浮望的核心设计原则。默认情况下，您的对话会保留在设备上，您可以完全控制要连接的 AI 服务提供商。\n\n浮望旨在让您掌控自己的数据，同时仍提供强大的 AI 助手体验。",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/privacy_protection/design.html",
+        "link_text": "了解更多"
+      },
+      {
+        "question": "社区版和标准版有什么区别？",
+        "answer": "浮望提供免费的社区版和标准版。社区版提供核心浮望体验，包含必要的功能。\n\n标准版在保持相同轻量级、注重隐私的方法的同时，增加了额外的功能。两个版本都提供相同高质量的对话体验，具有极速文本渲染和 Markdown 支持。",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
+        "link_text": "了解更多"
+      }
+    ]
+  },
+  "landing": {
+    "hero1": "你可以拥有的",
+    "hero2": "AI 体验",
+    "hero3": "你可以拥有一份专属的 AI 体验。即使没有我们的参与，也会一直工作。"
+  },
+  "footer": {
+    "copyright": "© 2025 浮望 团队。保留所有权利。"
+  },
+  "common": {
+    "download_button": "从 App Store 下载",
+    "download_link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/app_store.html",
+    "document_link_text": "阅读用户指南",
+    "document_link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
+    "platform_availability_macOS": "适用于 macOS 13.0+ 支持 Apple Silicon 和 Intel",
+    "platform_availability_iOS": "适用于 iOS 16.0+ 支持 iPhone 和 iPad"
+  },
+  "navbar": {
+    "document": "文档",
+    "pricing": "价格",
+    "privacy": "隐私",
+    "community_edition": "社区版",
+    "download": "下载",
+    "open_source": "开放源码"
+  },
+  "team": {
+    "title": "团队成员",
+    "subtitle": "浮望背后的创意团队",
+    "members": [
+      {
+        "name": "@Lakr233",
+        "role": "项目领航人",
+        "bio": "用热情与创意打造每一个细节。",
+        "image": "/avatars/lakr.png",
+        "github": "https://github.com/Lakr233",
+        "twitter": "https://twitter.com/Lakr233"
+      },
+      {
+        "name": "@ktiays",
+        "role": "核心开发者",
+        "bio": "专注打造浮望的前沿功能体验。",
+        "image": "/avatars/ktiays.jpg",
+        "github": "https://github.com/ktiays",
+        "twitter": "https://twitter.com/ktiays"
+      },
+      {
+        "name": "@unixzii",
+        "role": "引擎开发者",
+        "bio": "浮望文本渲染引擎的匠心打造者。",
+        "image": "/avatars/unixzii.jpg",
+        "github": "https://github.com/unixzii",
+        "twitter": "https://twitter.com/unixzii"
+      },
+      {
+        "name": "@innei",
+        "role": "网站开发",
+        "bio": "用代码勾勒浮望的网上家园。",
+        "image": "/avatars/innei.jpg",
+        "github": "https://github.com/innei",
+        "twitter": "https://twitter.com/__oQuery"
+      },
+      {
+        "name": "@hwwaanng",
+        "role": "视觉设计师",
+        "bio": "每个图标背后都有匠心故事。",
+        "image": "/avatars/hwwaanng.png",
+        "github": "https://github.com/hwangdev97",
+        "twitter": "https://twitter.com/hwwaanng"
+      }
+    ]
+  },
+  "openSource": {
+    "pageTitle": "开源项目 - 我们的研究与开发",
+    "pageDescription": "探索我们的开源项目和研究贡献",
+    "title": "开源项目时间线",
+    "description": "我们相信，只有开源开放，才能促进行业进步。我们的团队不断贡献于开源社区，以推动技术的发展。下面是我们在研发浮望的过程中，使用的一些框架和工具。",
+    "viewProject": "查看项目",
+    "comingSoon": "更多项目即将推出。请明天查看我们的下一个版本！",
+    "tryInApp": "在浮望中尝试此功能",
+    "toBeContinueTitle": "更多开源项目即将推出",
+    "toBeContinueDescription": "我们不断在开发新的开源项目。请定期查看我们的最新贡献。",
+    "closeLightbox": "关闭图片预览",
+    "previousImage": "上一张图片",
+    "nextImage": "下一张图片",
+    "imageCounter": "图片 {current} 共 {total} 张",
+    "authoredBy": "作者",
+    "coAuthoredBy": "合著者",
+    "onlyEnglish": "此部分仅提供英文版本。"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "app": {
+    "name": "FlowDown",
+    "title_description": "AI tools in your pocket.",
+    "description": "is an AI assistant that works for you."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is FlowDown?",
+        "answer": "FlowDown is a native AI client built with Swift and UIKit. It provides a lightweight, privacy-focused interface for interacting with various AI language models.\n\nWith its blazing fast text rendering and markdown support, FlowDown delivers a smooth and responsive AI conversation experience.",
+        "link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+        "link_text": "Learn More"
+      },
+      {
+        "question": "Which AI models does FlowDown support?",
+        "answer": "We provide free cloud model for every user who downloads FlowDown from the App Store, to offer convenience. You can learn about the service providers in privacy pages. This configuration is controlled by the cloud and cannot be modified.\n\nAdditionally, FlowDown supports enterprise api.",
+        "link": "https://apps.qaq.wiki/docs/flowdown/documents/advanced_settings/enterprise.html",
+        "link_text": "Learn More"
+      },
+      {
+        "question": "Is my data protected?",
+        "answer": "Yes, privacy is a core design principle of FlowDown. Your conversations stay on your device by default, and you have complete control over which AI service provider you connect to.\n\nFlowDown is designed to give you ownership of your data while still providing a powerful AI assistant experience.",
+        "link": "https://apps.qaq.wiki/docs/flowdown/documents/privacy_protection/design.html",
+        "link_text": "Learn More"
+      },
+      {
+        "question": "What's the difference between Community and Standard Editions?",
+        "answer": "FlowDown offers both Community (free) and Standard Editions. The Community Edition provides the core FlowDown experience with essential features.\n\nThe Standard Edition adds additional capabilities while maintaining the same lightweight, privacy-focused approach. Both versions deliver the same high-quality conversation experience with blazing fast text rendering and markdown support.",
+        "link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+        "link_text": "Learn More"
+      }
+    ]
+  },
+  "landing": {
+    "hero1": "AI That Works",
+    "hero2": "Even Without Us",
+    "hero3": "You can OWN a blazing fast and smooth Agent app. Switch between your AI services or use local models on your device."
+  },
+  "footer": {
+    "copyright": "© 2025 FlowDown Team. All rights reserved."
+  },
+  "common": {
+    "download_button": "Download @ App Store",
+    "download_link": "https://apps.qaq.wiki/docs/flowdown/documents/app_store.html",
+    "document_link_text": "Read User Guide",
+    "document_link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+    "platform_availability_macOS": "Available on macOS 13.0+ / Supports Apple Silicon & Intel",
+    "platform_availability_iOS": "Available on iOS 16.0+ / Supports iPhone & iPad"
+  },
+  "navbar": {
+    "document": "Documentation",
+    "pricing": "Pricing",
+    "privacy": "Privacy",
+    "community_edition": "Community Edition",
+    "download": "Download",
+    "open_source": "Open Source"
+  },
+  "team": {
+    "title": "Meet the Team",
+    "subtitle": "The talented people behind FlowDown",
+    "members": [
+      {
+        "name": "@Lakr233",
+        "role": "Project Leader",
+        "bio": "We build with passion and love.",
+        "image": "/avatars/lakr.png",
+        "github": "https://github.com/Lakr233",
+        "twitter": "https://twitter.com/Lakr233"
+      },
+      {
+        "name": "@ktiays",
+        "role": "Developer",
+        "bio": "Core developer of FlowDown, shipping cutting-edge features.",
+        "image": "/avatars/ktiays.jpg",
+        "github": "https://github.com/ktiays",
+        "twitter": "https://twitter.com/ktiays"
+      },
+      {
+        "name": "@unixzii",
+        "role": "Developer",
+        "bio": "Core developer of FlowDown Text Rendering Engine.",
+        "image": "/avatars/unixzii.jpg",
+        "github": "https://github.com/unixzii",
+        "twitter": "https://twitter.com/unixzii"
+      },
+      {
+        "name": "@innei",
+        "role": "Frontend Developer",
+        "bio": "Build our beautiful websites.",
+        "image": "/avatars/innei.jpg",
+        "github": "https://github.com/innei",
+        "twitter": "https://twitter.com/__oQuery"
+      },
+      {
+        "name": "@hwwaanng",
+        "role": "Icon Designer",
+        "bio": "Design the beautiful icons for FlowDown.",
+        "image": "/avatars/hwwaanng.png",
+        "github": "https://github.com/hwangdev97",
+        "twitter": "https://twitter.com/hwwaanng"
+      }
+    ]
+  },
+  "openSource": {
+    "pageTitle": "Open Source - Our Research & Development",
+    "pageDescription": "Explore our open source projects and research contributions",
+    "title": "Open Source Timeline",
+    "description": "We believe in open collaboration and its power to drive innovation. Our team continuously contributes to the open source community, advancing technology together. Below are some frameworks and tools we've used and enhanced while developing FlowDown.",
+    "viewProject": "View Project",
+    "comingSoon": "More projects coming soon. Check back tomorrow for our next release!",
+    "tryInApp": "Try this feature in our app",
+    "toBeContinueTitle": "More Open Source Projects Coming Soon",
+    "toBeContinueDescription": "We're constantly working on new open source projects. Check back regularly to see our latest contributions to the community.",
+    "closeLightbox": "Close image preview",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "imageCounter": "Image {current} of {total}",
+    "authoredBy": "Authored by",
+    "coAuthoredBy": "Co-authored by",
+    "onlyEnglish": "This section is only available in English."
+  }
+}
