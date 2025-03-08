@@ -122,6 +122,73 @@ const openSourceProjects: OpenSource = [
       link: 'https://github.com/Lakr233',
     },
   },
+  {
+    id: 3,
+    title: 'AlertController',
+    description:
+      'A modern, customizable alert controller implementation for iOS and macCatalyst applications.',
+    content: `
+  ## Key Features
+  - Custom styled alert views with clean UI
+  - Support for iOS and macCatalyst platforms
+  - Multiple action buttons with customizable styles (normal and dangerous)
+  - We handles dismiss and callback for you
+  - Text input support with clipboard integration
+  - Progress indicator for loading states
+  - Customizable accent colors and appearance
+  - Smooth animations with spring effects
+  - Escape key and outside tap dismissal options
+  - Localization support
+
+  ### Implementation Example
+
+  \`\`\`swift
+  let alert = AlertViewController(
+      title: "Hello World",
+      message: "This is a sample alert message"
+  ) { context in
+      context.addAction(title: "Cancel") {
+          context.dispose()
+      }
+      context.addAction(title: "Confirm", attribute: .dangerous) {
+          context.dispose {
+              // Your code here after confirmation
+          }
+      }
+  }
+  present(alert, animated: true)
+  \`\`\`
+      `,
+    date: '2025-03-12',
+    link: 'https://github.com/Lakr233/AlertController',
+    tags: ['iOS', 'UIKit', 'Swift', 'macCatalyst', 'Alert'],
+    images: [
+      {
+        src: '/opensource/alert-controller-1.png',
+        alt: 'AlertController alert view demo',
+        width: 800,
+        height: 400,
+      },
+      {
+        src: '/opensource/alert-controller-2.jpeg',
+        alt: 'AlertController alert view demo',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: [
+      {
+        name: '@Lakr233',
+        avatar: '/avatars/lakr.png',
+        link: 'https://github.com/Lakr233',
+      },
+      {
+        name: '@ktiays',
+        avatar: '/avatars/ktiays.jpg',
+        link: 'https://github.com/ktiays',
+      },
+    ],
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 const toBeContinue = true
