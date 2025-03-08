@@ -189,6 +189,42 @@ const openSourceProjects: OpenSource = [
       },
     ],
   },
+  {
+    id: 4,
+    title: 'Litext',
+    description: 'Tiny rich-text supporting library for iOS & macOS',
+    content: `
+  ## Key Features
+
+  - High performance text layout and rendering
+  - Text attachments with native view supports
+  - Interactable links
+  - Custom draw callbacks
+  - Auto layout integration
+    `,
+    date: '2025-03-13',
+    link: 'https://github.com/Helixform/Litext',
+    tags: ['CoreText', 'Text', 'Rich Text', 'Objective-C'],
+    images: [
+      {
+        src: '/opensource/litext-1.png',
+        alt: 'Litext Banner',
+        width: 800,
+        height: 400,
+      },
+      {
+        src: '/opensource/litext-2.png',
+        alt: 'Litext Banner',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@unixzii',
+      avatar: '/avatars/unixzii.jpg',
+      link: 'https://github.com/unixzii',
+    },
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 const toBeContinue = true
