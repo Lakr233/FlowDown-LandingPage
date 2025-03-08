@@ -259,6 +259,37 @@ const openSourceProjects: OpenSource = [
       link: 'https://github.com/Lakr233',
     },
   },
+  {
+    id: 6,
+    title: 'FlowDown Community',
+    description:
+      "FlowDown Community serves as the predecessor project of FlowDown, designed to validate core functionalities' feasibility and evaluate competitive positioning within current software market offerings.",
+    content: `
+  ## Key Features
+    
+  - **Basic Chat Functionality**: Standard AI conversation capabilities
+  - **Fast Rendering Engine (v1)**: Lightweight text display system
+  - **Open Source Code**: Complete access to source code
+  - **Markdown Support**: Handles formatted text (headings, lists, code, tables...)
+  - **Simple Title**: Simple title generation
+    `,
+    date: '2025-03-15',
+    link: 'https://github.com/Lakr233/FlowDown-App',
+    tags: ['Swift', 'UIKit', 'App', 'Community'],
+    images: [
+      {
+        src: '/opensource/flowdown-community-1.png',
+        alt: 'FlowDown Community App Screenshot',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 const toBeContinue = true
