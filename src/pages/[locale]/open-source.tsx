@@ -227,6 +227,38 @@ const openSourceProjects: OpenSource = [
       link: 'https://github.com/unixzii',
     },
   },
+  {
+    id: 5,
+    title: 'ScrubberKit',
+    description:
+      'ScrubberKit is a robust framework designed to scrape and process web content using keywords, transforming complex HTML pages into clean, plain text suitable for AI model consumption.',
+    content: `
+  ## Key Features
+
+  - Keyword-based web content discovery
+  - SwiftSoup-based HTML parsing and cleaning
+  - Plain text extraction optimized for AI consumption
+  - Cross-platform support (iOS, macOS, macCatalyst, visionOS)
+  - Asynchronous operations for efficient performance
+  - Automatically block font and media resources
+    `,
+    date: '2025-03-14',
+    link: 'https://github.com/Lakr233/ScrubberKit',
+    tags: ['Swift', 'Web Scraping', 'HTML Parsing', 'AI'],
+    images: [
+      {
+        src: '/opensource/scrubberkit-1.jpg',
+        alt: 'ScrubblerKit Playground',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 const toBeContinue = true
