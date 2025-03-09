@@ -31,7 +31,48 @@ type OpenSource = {
   author: Author | Author[]
 }[]
 
-const openSourceProjects: OpenSource = []
+const openSourceProjects: OpenSource = [
+  {
+    id: 1,
+    title: 'GlyphixTextFx',
+    description:
+      "FlowDown's text animation framework. We backported SwiftUI numeric transition features to UIKit for older iOS versions",
+    content: `
+  ## Key Features
+  - **High-performance numeric transitions**: Smooth digit scrolling and animation effects
+  - **UIKit compatible**: Designed for older iOS systems without requiring SwiftUI
+  - **Easy integration**: Simple and intuitive API interface
+  - **Highly customizable**: Supports custom animation parameters and styles
+
+  ### Implementation Example
+
+  \`\`\`swift
+  import GlyphixTextFx
+  let glyphixLabel: GlyphixTextLabel = .init()
+  let labelConfiguration: LabelConfiguration = .init()
+  glyphixLabel.font = labelFont
+  glyphixLabel.text = "Hello World"
+  view.addSubview(glyphixLabel)
+  \`\`\`
+      `,
+    date: '2025-03-10',
+    link: 'https://github.com/ktiays/GlyphixTextFx',
+    tags: ['iOS', 'UIKit', 'Animation', 'Text Effects'],
+    images: [
+      {
+        src: '/opensource/glyphix-text-fx-1.jpg',
+        alt: 'GlyphixTextFx numeric transition animation demo',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@ktiays',
+      avatar: '/avatars/ktiays.jpg',
+      link: 'https://github.com/ktiays',
+    },
+  },
+]
 
 const toBeContinue = true
 
