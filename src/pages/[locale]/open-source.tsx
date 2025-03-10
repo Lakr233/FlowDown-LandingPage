@@ -72,7 +72,57 @@ const openSourceProjects: OpenSource = [
       link: 'https://github.com/ktiays',
     },
   },
-]
+  {
+    id: 2,
+    title: 'ConfigurableKit',
+    description: 'The simple but yet powerful way to build settings page.',
+    content: `
+  ## Key Features
+  - Simple Setup: define what you want and we handle the rest.
+  - Ultra fast written in Swift and UIKit. (No SwiftUI)
+  - Rich value type support, including Codable.
+  - Sync your settings with UserDefaults.
+  - Support for customizing the storage engine other than UserDefaults.
+  - Support for nested values and controllers.
+  - Support for disabling setting element based on condition.
+
+  ### Implementation Example
+
+  \`\`\`swift
+  ConfigurableObject(
+    icon: "switch.2",
+    title: "Toggle Item Below",
+    explain: "Item with boolean value to be edited",
+    key: "wiki.qaq.test.boolean",
+    defaultValue: true,
+    annotation: .boolean
+  )
+  \`\`\`
+      `,
+    date: '2025-03-11',
+    link: 'https://github.com/Lakr233/ConfigurableKit',
+    tags: ['iOS', 'UIKit', 'Settings', 'Swift', 'UserDefaults'],
+    images: [
+      {
+        src: '/opensource/configurable-kit-1.png',
+        alt: 'ConfigurableKit settings page demo',
+        width: 800,
+        height: 400,
+      },
+      {
+        src: '/opensource/configurable-kit-2.jpg',
+        alt: 'ConfigurableKit settings page demo',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 const toBeContinue = true
 
