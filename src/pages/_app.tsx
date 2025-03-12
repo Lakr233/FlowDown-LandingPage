@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
 import { TooltipProvider } from '@radix-ui/react-tooltip'
+import { LazyMotion } from 'framer-motion'
 import { Provider } from 'jotai'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -11,6 +12,9 @@ import { ThemeProvider } from 'next-themes'
 import { jotaiStore } from 'src/lib/jotai'
 import { EventProvider } from 'src/providers/event-provider'
 import { PageScrollInfoProvider } from 'src/providers/page-scroll-info-provider'
+
+const loadFeatures = () =>
+  import('../lazy/framer-lazy-feature').then((res) => res.default)
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -37,15 +41,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Seo />
 
-      <Provider store={jotaiStore}>
-        <TooltipProvider delayDuration={150}>
-          <EventProvider />
-          <PageScrollInfoProvider />
-          <ThemeProvider>
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </TooltipProvider>
-      </Provider>
+      <LazyMotion features={loadFeatures}>
+        <Provider store={jotaiStore}>
+          <TooltipProvider delayDuration={150}>
+            <EventProvider />
+            <PageScrollInfoProvider />
+            <ThemeProvider>
+              <Component {...pageProps} />
+            </ThemeProvider>
+          </TooltipProvider>
+        </Provider>
+      </LazyMotion>
     </NextIntlClientProvider>
   )
 }

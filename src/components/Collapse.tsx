@@ -2,7 +2,7 @@
 
 import clsx from 'clsx'
 import type { Variants } from 'framer-motion'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import * as React from 'react'
 
 export const Collapse: React.FC<
@@ -70,7 +70,7 @@ export const CollapseContent: React.FC<
     <>
       <AnimatePresence initial={false}>
         {isOpened && (
-          <motion.div
+          <m.div
             key="content"
             initial="collapsed"
             animate="open"
@@ -79,7 +79,7 @@ export const CollapseContent: React.FC<
             className={className}
           >
             {children}
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

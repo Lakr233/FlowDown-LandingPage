@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import * as React from 'react'
 
@@ -38,14 +38,14 @@ export const Team = () => {
 
   return (
     <div id="team" className="mx-auto w-full max-w-7xl py-16 md:py-24">
-      <motion.div
+      <m.div
         className="mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <motion.h2
+        <m.h2
           className="text-3xl font-medium tracking-tight text-zinc-700 dark:text-zinc-200 md:text-4xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -53,8 +53,8 @@ export const Team = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           {t('title')}
-        </motion.h2>
-        <motion.p
+        </m.h2>
+        <m.p
           className="mt-4 text-lg text-zinc-500 dark:text-zinc-400"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -62,10 +62,10 @@ export const Team = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
         >
           {t('subtitle')}
-        </motion.p>
-      </motion.div>
+        </m.p>
+      </m.div>
 
-      <motion.div
+      <m.div
         className="grid grid-cols-1 gap-10 px-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -75,7 +75,7 @@ export const Team = () => {
         {teamMembers.map((member, index) => (
           <TeamMemberCard key={member.id} member={member} index={index} />
         ))}
-      </motion.div>
+      </m.div>
     </div>
   )
 }
@@ -88,7 +88,7 @@ const TeamMemberCard = ({
   index: number
 }) => {
   return (
-    <motion.div
+    <m.div
       className="flex flex-col items-center text-center"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ const TeamMemberCard = ({
         damping: 15,
       }}
     >
-      <motion.div
+      <m.div
         className="mb-4 overflow-hidden rounded-full border-2 border-accent"
         whileHover={{
           scale: 1.05,
@@ -116,7 +116,7 @@ const TeamMemberCard = ({
           height={120}
           className="size-[128px] object-cover"
         />
-      </motion.div>
+      </m.div>
       <h3 className="mb-1 text-xl font-semibold text-zinc-700 dark:text-zinc-200">
         {member.name}
       </h3>
@@ -125,7 +125,7 @@ const TeamMemberCard = ({
         {member.bio}
       </p>
 
-      <motion.div
+      <m.div
         className="flex space-x-4"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -133,7 +133,7 @@ const TeamMemberCard = ({
         transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
       >
         {member.github && member.github.length > 0 && (
-          <motion.a
+          <m.a
             href={member.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -142,10 +142,10 @@ const TeamMemberCard = ({
             whileTap={{ scale: 0.9 }}
           >
             <i className="i-mingcute-github-fill size-5" />
-          </motion.a>
+          </m.a>
         )}
         {member.twitter && member.twitter.length > 0 && (
-          <motion.a
+          <m.a
             href={member.twitter}
             target="_blank"
             rel="noopener noreferrer"
@@ -154,9 +154,9 @@ const TeamMemberCard = ({
             whileTap={{ scale: 0.9 }}
           >
             <i className="i-mingcute-twitter-fill size-5" />
-          </motion.a>
+          </m.a>
         )}
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   )
 }

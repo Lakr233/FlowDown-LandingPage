@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
+import { AnimatePresence, m, useScroll, useTransform } from 'framer-motion'
 import { Squash as Hamburger } from 'hamburger-react'
 import { useTranslations } from 'next-intl'
 import * as React from 'react'
@@ -61,7 +61,7 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden flex-row items-center space-x-3 lg:flex">
-            <motion.a
+            <m.a
               initial={true}
               whileFocus={{ scale: 1.02 }}
               whileHover={{ scale: 1.02 }}
@@ -74,9 +74,9 @@ export const Navbar = () => {
             >
               <i className="i-mingcute-github-2-fill mr-2 size-4" />
               {t('community_edition')}
-            </motion.a>
+            </m.a>
 
-            <motion.a
+            <m.a
               initial={true}
               whileFocus={{ scale: 1.02 }}
               whileHover={{ scale: 1.02 }}
@@ -89,7 +89,7 @@ export const Navbar = () => {
             >
               <i className="i-mingcute-apple-fill mr-2 size-4" />
               {t('download')}
-            </motion.a>
+            </m.a>
           </div>
           <div className="flex lg:hidden">
             <MobileNav navItems={navItems} />
@@ -141,7 +141,7 @@ const MobileNav = ({ navItems }: any) => {
       <AnimatePresence>
         {open && (
           <>
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -154,7 +154,7 @@ const MobileNav = ({ navItems }: any) => {
               }
               onClick={() => setOpen(false)}
             />
-            <motion.div
+            <m.div
               variants={item}
               initial="hidden"
               animate="show"
@@ -163,7 +163,7 @@ const MobileNav = ({ navItems }: any) => {
             >
               <div className="flex w-full flex-col items-center p-6">
                 {navItems.map((navItem: any) => (
-                  <motion.div
+                  <m.div
                     key={`nav-item-${navItem.id}`}
                     variants={childItems}
                     className="w-full border-b border-zinc-100 py-3 dark:border-zinc-800"
@@ -174,10 +174,10 @@ const MobileNav = ({ navItems }: any) => {
                         {navItem.name}
                       </span>
                     </CustomLink>
-                  </motion.div>
+                  </m.div>
                 ))}
 
-                <motion.div
+                <m.div
                   variants={childItems}
                   className="mt-4 flex w-full flex-row justify-center space-x-3"
                 >
@@ -196,9 +196,9 @@ const MobileNav = ({ navItems }: any) => {
                     <i className="i-mingcute-apple-fill mr-2 size-3.5" />
                     Download
                   </a>
-                </motion.div>
+                </m.div>
               </div>
-            </motion.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>
@@ -227,7 +227,7 @@ const BackDrop = () => {
   const opacity = useTransform(scrollY, [30, 150], [0, 1])
 
   return (
-    <motion.div
+    <m.div
       style={{ opacity }}
       className="absolute inset-0 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/80"
     />

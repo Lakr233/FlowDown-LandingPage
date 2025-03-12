@@ -1,53 +1,54 @@
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useEffect, useMemo, useState } from 'react'
+import { smoothPreset } from 'src/constants/spring'
 import { useOS } from 'src/hooks/useOS'
 
 export const Hero = () => {
   const t = useTranslations('landing')
   return (
     <div className="relative mt-16 flex flex-col items-center justify-center overflow-hidden pb-10 md:px-8">
-      <motion.div
+      <m.div
         className="relative mt-10 flex flex-col items-center justify-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <h1 className="relative mb-4 text-center text-4xl font-bold text-zinc-700 dark:text-zinc-200 md:text-7xl">
-          <motion.span
+          <m.span
             className="relative z-10 bg-gradient-to-r from-blue-400 to-accent bg-clip-text text-transparent"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             {t('hero1')}
-          </motion.span>{' '}
-          <motion.span
+          </m.span>{' '}
+          <m.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             {t('hero2')}
-          </motion.span>
+          </m.span>
         </h1>
-        <motion.h2
+        <m.h2
           className="relative mx-auto mb-4 max-w-3xl text-center text-lg font-normal tracking-wide text-zinc-500 antialiased dark:text-zinc-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
           {t('hero3')}
-        </motion.h2>
-      </motion.div>
+        </m.h2>
+      </m.div>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.5 }}
       >
         <DownloadButtonGroup />
-      </motion.div>
+      </m.div>
 
       <ScreenShot />
     </div>
@@ -63,41 +64,43 @@ const DownloadButtonGroup = () => {
         <button className="group relative z-10">
           <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-blue-300 to-accent opacity-25 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200" />
 
-          <motion.a
+          <m.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             target="_blank"
+            transition={smoothPreset}
             rel="noopener noreferrer"
             className="hover:shadow-accent/50 relative z-10 block rounded-full bg-accent px-6 py-3 font-bold text-white shadow-lg transition-shadow duration-300"
             href={t('download_link')}
           >
             {t('download_button')}
-          </motion.a>
+          </m.a>
         </button>
 
-        <motion.a
+        <m.a
           href={t('document_link')}
           className="mt-3 flex items-center gap-1.5 text-sm font-medium text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400 dark:hover:text-accent"
           target="_blank"
+          transition={smoothPreset}
           rel="noopener noreferrer"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
           <span>{t('document_link_text')}</span>
-        </motion.a>
+        </m.a>
 
-        <motion.div
+        <m.div
           className="mt-5 text-xs text-zinc-500 dark:text-zinc-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          transition={{ delay: 0.3, ...smoothPreset }}
         >
           <p>
             {isMacOS
               ? t('platform_availability_macOS')
               : t('platform_availability_iOS')}
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </div>
   )
@@ -201,7 +204,7 @@ const ScreenShot = () => {
   }, [slides.length, isPaused])
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.5, duration: 0.8 }}
@@ -246,6 +249,6 @@ const ScreenShot = () => {
           />
         ))}
       </div>
-    </motion.div>
+    </m.div>
   )
 }

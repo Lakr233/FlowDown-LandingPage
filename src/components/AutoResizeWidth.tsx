@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import type { Spring } from 'framer-motion'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import type * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
 
@@ -39,7 +39,7 @@ export const AutoResizeWidth: React.FC<AnimateChangeInWidthProps> = ({
   }, [])
 
   return (
-    <motion.div
+    <m.div
       className={clsx('overflow-hidden', className)}
       style={{ width }}
       initial={false}
@@ -49,7 +49,7 @@ export const AutoResizeWidth: React.FC<AnimateChangeInWidthProps> = ({
       <div className="w-fit" ref={containerRef}>
         {children}
       </div>
-    </motion.div>
+    </m.div>
   )
 }
 const softSpringPreset: Spring = {

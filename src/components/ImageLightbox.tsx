@@ -1,5 +1,6 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { useEffect } from 'react'
+import { smoothPreset } from 'src/constants/spring'
 
 type ImageType = {
   src: string
@@ -22,16 +23,15 @@ interface ImageLightboxProps {
   }
 }
 
-// 灯箱动画变体
 const lightboxVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.3 },
+    transition: smoothPreset,
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2 },
+    transition: smoothPreset,
   },
 }
 
@@ -40,12 +40,12 @@ const lightboxImageVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.3 },
+    transition: smoothPreset,
   },
   exit: {
     opacity: 0,
     scale: 0.8,
-    transition: { duration: 0.2 },
+    transition: smoothPreset,
   },
 }
 
@@ -86,7 +86,7 @@ export function ImageLightbox({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <m.div
           className="fixed inset-0 z-[999] flex items-center justify-center bg-black/90 backdrop-blur-sm"
           variants={lightboxVariants}
           initial="hidden"
@@ -128,7 +128,7 @@ export function ImageLightbox({
             </button>
           )}
 
-          <motion.div
+          <m.div
             className="relative max-h-[90vh] max-w-[90vw]"
             variants={lightboxImageVariants}
             onClick={(e) => e.stopPropagation()}
@@ -138,8 +138,8 @@ export function ImageLightbox({
               alt={images[currentIndex].alt}
               className="max-h-[90vh] max-w-full object-contain"
             />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </AnimatePresence>
   )

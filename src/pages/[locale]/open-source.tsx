@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { NextSeo } from 'next-seo'
 import { useCallback, useState } from 'react'
+import { snappy, snappyPreset } from 'src/constants/spring'
 
 import { AutoResizeWidth } from '@/components/AutoResizeWidth'
 import { Container } from '@/components/Container'
@@ -245,11 +246,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 100,
-      damping: 15,
-    },
+    transition: snappy(0.6, 0.2),
   },
 }
 
@@ -296,14 +293,11 @@ export default function OpenSource() {
       <NextSeo title={t('pageTitle')} description={t('pageDescription')} />
 
       <Container className="mt-8 sm:mt-16">
-        <motion.div
+        <m.div
           className="mx-auto max-w-3xl text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
+          transition={snappy(0.6)}
         >
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             {t('title')}
@@ -315,30 +309,26 @@ export default function OpenSource() {
           <p className="mt-5 text-sm underline decoration-zinc-600/50 opacity-50 dark:decoration-zinc-400/50">
             {t('onlyEnglish')}
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="mt-8 sm:mt-16">
           <div className="relative mx-auto max-w-3xl">
-            <motion.ul
+            <m.ul
               className="space-y-16"
               variants={containerVariants}
               initial="hidden"
               animate={'visible'}
             >
               {openSourceProjects.map((project, projectIndex) => (
-                <motion.li
+                <m.li
                   key={project.id}
                   className="group relative"
                   variants={itemVariants}
                   whileHover={{ scale: 1.01 }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 300,
-                    damping: 20,
-                  }}
+                  transition={snappy(0.6, 0.2)}
                 >
                   <div className="mb-3">
-                    <motion.time
+                    <m.time
                       className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -349,24 +339,24 @@ export default function OpenSource() {
                         month: 'long',
                         day: 'numeric',
                       })}
-                    </motion.time>
+                    </m.time>
                   </div>
 
-                  <motion.div
+                  <m.div
                     className="overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm backdrop-blur transition-all duration-300 group-hover:shadow-md dark:border-zinc-700/80 dark:bg-zinc-800/80"
                     layoutId={`project-card-${project.id}`}
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between">
-                        <motion.h2
+                        <m.h2
                           className="text-xl font-semibold text-zinc-900 dark:text-zinc-100"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                         >
                           {project.title}
-                        </motion.h2>
+                        </m.h2>
 
-                        <motion.div
+                        <m.div
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="ml-4 shrink-0"
@@ -380,47 +370,46 @@ export default function OpenSource() {
                             <i className="i-mingcute-github-line mr-1" />
                             {t('viewProject')}
                           </CustomLink>
-                        </motion.div>
+                        </m.div>
                       </div>
 
-                      <motion.p
+                      <m.p
                         className="mt-2 text-zinc-600 dark:text-zinc-400"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.1 }}
                       >
                         {project.description}
-                      </motion.p>
+                      </m.p>
 
                       {/* 标签 - Apple 风格的标签 */}
                       <div className="mt-4 flex flex-wrap gap-2">
                         {project.tags.map((tag, index) => (
-                          <motion.span
+                          <m.span
                             key={tag}
                             className="inline-flex items-center rounded-md bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-700 dark:bg-zinc-700/50 dark:text-zinc-300"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
                               delay: 0.1 * index,
-                              duration: 0.3,
-                              ease: 'easeOut',
+                              ...snappyPreset,
                             }}
                           >
                             {tag}
-                          </motion.span>
+                          </m.span>
                         ))}
                       </div>
 
                       {/* 预览图区域 */}
                       {project.images && project.images.length > 0 && (
-                        <motion.div
+                        <m.div
                           className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2"
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2, duration: 0.5 }}
                         >
                           {project.images.map((image, imageIndex) => (
-                            <motion.div
+                            <m.div
                               key={imageIndex}
                               className="relative aspect-[16/9] cursor-pointer overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800/50"
                               whileHover={{ scale: 1.02 }}
@@ -444,29 +433,29 @@ export default function OpenSource() {
                                   <i className="i-mingcute-zoom-in-line text-lg text-zinc-800 dark:text-zinc-200" />
                                 </div>
                               </div>
-                            </motion.div>
+                            </m.div>
                           ))}
-                        </motion.div>
+                        </m.div>
                       )}
 
-                      <motion.div
+                      <m.div
                         className="mt-6 border-t border-zinc-100 pt-6 dark:border-zinc-700/50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
+                        transition={{ delay: 0.3, ...snappyPreset }}
                       >
                         <MarkdownRenderer>{project.content}</MarkdownRenderer>
-                      </motion.div>
+                      </m.div>
 
-                      <motion.div
+                      <m.div
                         className="mt-8 border-t group/avatars border-zinc-100 pt-6 dark:border-zinc-700/50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.5 }}
+                        transition={{ delay: 0.4, ...snappy(0.5, 0.2) }}
                       >
                         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
                           {project.author && (
-                            <motion.div
+                            <m.div
                               className="flex items-center"
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
@@ -529,10 +518,10 @@ export default function OpenSource() {
                                   ))}
                                 </>
                               )}
-                            </motion.div>
+                            </m.div>
                           )}
 
-                          <motion.div
+                          <m.div
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                           >
@@ -545,17 +534,17 @@ export default function OpenSource() {
                               <i className="i-mingcute-apple-fill mr-2" />
                               {commonT('download_button')}
                             </CustomLink>
-                          </motion.div>
+                          </m.div>
                         </div>
-                      </motion.div>
+                      </m.div>
                     </div>
-                  </motion.div>
-                </motion.li>
+                  </m.div>
+                </m.li>
               ))}
 
               {toBeContinue && (
-                <motion.li className="relative" variants={itemVariants}>
-                  <motion.div
+                <m.li className="relative" variants={itemVariants}>
+                  <m.div
                     className="rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/50 p-8 backdrop-blur dark:border-zinc-700 dark:bg-zinc-800/20"
                     whileHover={{ scale: 1.01 }}
                     transition={{
@@ -565,7 +554,7 @@ export default function OpenSource() {
                     }}
                   >
                     <div className="flex flex-col items-center justify-center text-center">
-                      <motion.div
+                      <m.div
                         className="relative mb-6"
                         animate={{
                           y: [0, -5, 0],
@@ -578,7 +567,7 @@ export default function OpenSource() {
                         }}
                       >
                         <i className="i-mingcute-code-line text-4xl text-accent opacity-80" />
-                        <motion.div
+                        <m.div
                           className="absolute -right-1 -top-1 size-3 rounded-full bg-accent"
                           animate={{
                             scale: [1, 1.2, 1],
@@ -590,27 +579,27 @@ export default function OpenSource() {
                             repeatType: 'loop',
                           }}
                         />
-                      </motion.div>
+                      </m.div>
 
-                      <motion.h3
+                      <m.h3
                         className="mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
                       >
                         {t('toBeContinueTitle')}
-                      </motion.h3>
+                      </m.h3>
 
-                      <motion.p
+                      <m.p
                         className="max-w-md text-zinc-600 dark:text-zinc-400"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                       >
                         {t('toBeContinueDescription')}
-                      </motion.p>
+                      </m.p>
 
-                      <motion.div
+                      <m.div
                         className="mt-6"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -625,12 +614,12 @@ export default function OpenSource() {
                           <i className="i-mingcute-book-6-line mr-2" />
                           {commonT('document_link_text')}
                         </CustomLink>
-                      </motion.div>
+                      </m.div>
                     </div>
-                  </motion.div>
-                </motion.li>
+                  </m.div>
+                </m.li>
               )}
-            </motion.ul>
+            </m.ul>
           </div>
         </div>
       </Container>
