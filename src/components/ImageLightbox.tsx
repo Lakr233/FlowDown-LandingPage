@@ -83,8 +83,6 @@ export function ImageLightbox({
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose, onNext, onPrev])
 
-  if (!isOpen || images.length === 0) return null
-
   return (
     <AnimatePresence>
       {isOpen && (
