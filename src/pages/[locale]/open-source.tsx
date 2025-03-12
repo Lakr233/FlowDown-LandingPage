@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import { NextSeo } from 'next-seo'
 import { useCallback, useState } from 'react'
 
+import { AutoResizeWidth } from '@/components/AutoResizeWidth'
 import { Container } from '@/components/Container'
 import { CustomLink } from '@/components/CustomLink'
 import { ImageLightbox } from '@/components/ImageLightbox'
@@ -290,7 +291,6 @@ export default function OpenSource() {
     }
   }, [currentImages.length])
 
-  const [shouldShowAvatarName, setShouldShowAvatarName] = useState(false)
   return (
     <>
       <NextSeo title={t('pageTitle')} description={t('pageDescription')} />
@@ -459,8 +459,6 @@ export default function OpenSource() {
                       </motion.div>
 
                       <motion.div
-                        onHoverStart={() => setShouldShowAvatarName(true)}
-                        onHoverEnd={() => setShouldShowAvatarName(false)}
                         className="mt-8 border-t group/avatars border-zinc-100 pt-6 dark:border-zinc-700/50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -506,20 +504,27 @@ export default function OpenSource() {
                                     <CustomLink
                                       key={author.name}
                                       href={author.link}
-                                      className="group flex items-center mr-3"
+                                      className="group flex items-center"
                                       target="_blank"
                                       rel="noopener noreferrer"
                                     >
-                                      <div className="relative mr-2 size-8 overflow-hidden rounded-full">
+                                      <div className="relative mr-3 size-8 overflow-hidden rounded-full">
                                         <img
                                           src={author.avatar}
                                           alt={author.name}
                                           className="size-full object-cover transition-transform duration-300 group-hover:scale-110"
                                         />
                                       </div>
-                                      <span className="text-sm font-medium text-zinc-700 transition-colors group-hover:text-accent dark:text-zinc-300 dark:group-hover:text-accent">
-                                        {author.name}
-                                      </span>
+                                      <div className="flex gap-2 items-center">
+                                        <AutoResizeWidth
+                                          spring
+                                          className="text-sm font-medium text-zinc-700 transition-colors group-hover:text-accent dark:text-zinc-300 dark:group-hover:text-accent mr-2"
+                                        >
+                                          <span className="block group-hover:w-auto w-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                            {author.name}
+                                          </span>
+                                        </AutoResizeWidth>
+                                      </div>
                                     </CustomLink>
                                   ))}
                                 </>
@@ -648,15 +653,3 @@ export default function OpenSource() {
 }
 
 export { getStaticPaths, getStaticProps } from 'src/lib/get-i18n-props'
-
-// const AnimatedAvatar: React.FC<{ name: string }> = ({ name }) => {
-
-//   return (
-//     <motion.span
-//       layout
-//       className="group-hover/avatars:inline text-sm font-medium text-zinc-700 transition-colors group-hover:text-accent dark:text-zinc-300 dark:group-hover:text-accent"
-//     >
-//       {name}
-//     </motion.span>
-//   )
-// }
