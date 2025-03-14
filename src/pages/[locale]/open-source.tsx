@@ -420,10 +420,11 @@ export default function OpenSource() {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
                     >
-                      {new Date(project.date).toLocaleDateString('zh-CN', {
+                      {new Date(project.date).toLocaleDateString(undefined, {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',
+                        timeZone: 'Asia/Shanghai', // UTC+8
                       })}
                     </m.time>
                   </div>
