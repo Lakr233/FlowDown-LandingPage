@@ -119,6 +119,7 @@
     "imageCounter": "图片 {current} 共 {total} 张",
     "authoredBy": "作者",
     "coAuthoredBy": "合著者",
-    "onlyEnglish": "此部分仅提供英文版本。"
+    "onlyEnglish": "此部分仅提供英文版本。",
+    "weHaveDone": "开源项目列表已完结，感谢您的关注。"
   }
 }

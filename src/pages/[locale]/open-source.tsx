@@ -290,9 +290,32 @@ const openSourceProjects: OpenSource = [
       link: 'https://github.com/Lakr233',
     },
   },
+  {
+    id: 7,
+    title: 'FlowDown Landing Page',
+    description: 'Finally, the landing page itself, is now open sourced.',
+    content: `
+  ## Key Features
+  
+  - **Modern Design**: Clean and simple user interface
+  - **Responsive Layout**: Mobile and desktop friendly
+  - **SEO Optimized**: Metadata and structured data
+  - **Dark Mode Support**: Automatic theme detection
+  - **Internationalization**: Multi-language support
+    `,
+    date: '2025-03-16',
+    link: 'https://github.com/Lakr233/FlowDown-LandingPage',
+    tags: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Frame Motion'],
+    images: [],
+    author: {
+      name: '@innei',
+      avatar: '/avatars/innei.jpg',
+      link: 'https://github.com/innei',
+    },
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
-const toBeContinue = true
+const toBeContinue = false
 
 const containerVariants = {
   hidden: { opacity: 0 },

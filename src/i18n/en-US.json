@@ -119,6 +119,7 @@
     "imageCounter": "Image {current} of {total}",
     "authoredBy": "Authored by",
     "coAuthoredBy": "Co-authored by",
-    "onlyEnglish": "This section is only available in English."
+    "onlyEnglish": "This section is only available in English.",
+    "weHaveDone": "We have listed all the open source projects we have prepared, thank you for your interest."
   }
 }
