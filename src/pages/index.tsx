@@ -15,6 +15,10 @@ export default function Home() {
         router.push(`/zh-CN`)
         break
       }
+      default: {
+        router.push(`/en-US`)
+        break
+      }
     }
   }, [])
   return null
