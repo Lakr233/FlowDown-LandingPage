@@ -1,6 +1,6 @@
-import type en from './src/i18n/en-US.json'
+import type en from "./src/i18n/en-US.json";
 
-type Messages = typeof en
+type Messages = typeof en;
 
 declare global {
   // Use type safe message keys with `next-intl`
@@ -10,8 +10,8 @@ declare global {
 declare global {
   interface Window {
     environment: {
-      isIOS: boolean
-      isMacOS: boolean
-    }
+      isIOS: boolean;
+      isMacOS: boolean;
+    };
   }
 }

@@ -1,23 +1,23 @@
-import { AiOutlineCode } from 'react-icons/ai'
-import { BiRocket } from 'react-icons/bi'
-import { BsFillBookmarkCheckFill } from 'react-icons/bs'
-import { FaLaptopCode } from 'react-icons/fa'
+import { AiOutlineCode } from "react-icons/ai";
+import { BiRocket } from "react-icons/bi";
+import { BsFillBookmarkCheckFill } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa";
 
 export const appConfig = {
   app: {
-    github: 'https://github.com/Lakr233/FlowDown-App',
+    github: "https://github.com/Lakr233/FlowDown-App",
     download_link:
-      'https://apps.qaq.wiki/docs/flowdown/documents/app_store.html',
+      "https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html",
   },
-}
+};
 
 export interface Testimonial {
-  id: number
-  content: React.ReactNode
-  name: string
-  designation: string
-  link: string
-  image: string
+  id: number;
+  content: React.ReactNode;
+  name: string;
+  designation: string;
+  link: string;
+  image: string;
 }
 export const testimonials: Testimonial[] = [
   {
@@ -34,14 +34,14 @@ export const testimonials: Testimonial[] = [
         control over my AI experience."
       </>
     ),
-    name: 'Lakr Aream',
-    designation: 'FlowDown Team',
-    link: 'https://github.com/Lakr233',
-    image: '/avatars/lakr.png',
+    name: "Lakr Aream",
+    designation: "FlowDown Team",
+    link: "https://github.com/Lakr233",
+    image: "/avatars/lakr.png",
   },
   {
     id: 1,
-    link: 'https://github.com/Lakr233/FlowDown-Beta',
+    link: "https://github.com/Lakr233/FlowDown-Beta",
     content: (
       <>
         "What sets FlowDown apart is its thoughtful design and performance. The
@@ -51,18 +51,18 @@ export const testimonials: Testimonial[] = [
         remains smooth and efficient."
       </>
     ),
-    name: 'Lakr Aream',
-    designation: 'AI Enthusiast',
-    image: '/avatars/lakr.png',
+    name: "Lakr Aream",
+    designation: "AI Enthusiast",
+    image: "/avatars/lakr.png",
   },
-]
+];
 
 export const services = [
   {
     id: 0,
-    title: 'Native & Lightweight',
+    title: "Native & Lightweight",
     description:
-      'Built with Swift and SwiftUI for macOS, FlowDown is incredibly lightweight and responsive, providing a seamless native experience.',
+      "Built with Swift and SwiftUI for macOS, FlowDown is incredibly lightweight and responsive, providing a seamless native experience.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -90,9 +90,9 @@ export const services = [
   },
   {
     id: 1,
-    title: 'Blazing Fast Rendering',
+    title: "Blazing Fast Rendering",
     description:
-      'Experience lightning-fast text rendering with smooth markdown support, making AI conversations feel natural and responsive.',
+      "Experience lightning-fast text rendering with smooth markdown support, making AI conversations feel natural and responsive.",
     icon: <AiOutlineCode className="size-8 text-gray-500" />,
     pattern: {
       y: -6,
@@ -104,9 +104,9 @@ export const services = [
   },
   {
     id: 2,
-    title: 'Privacy by Design',
+    title: "Privacy by Design",
     description:
-      'Your conversations stay on your device. FlowDown is designed with privacy in mind, giving you complete control over your data.',
+      "Your conversations stay on your device. FlowDown is designed with privacy in mind, giving you complete control over your data.",
     icon: <BiRocket className="size-8 stroke-gray-500 text-gray-500" />,
     pattern: {
       y: 32,
@@ -118,9 +118,9 @@ export const services = [
   },
   {
     id: 3,
-    title: 'Bring Your Own LLM',
+    title: "Bring Your Own LLM",
     description:
-      'Connect to any OpenAI-compatible service provider of your choice, including local models, giving you flexibility and control.',
+      "Connect to any OpenAI-compatible service provider of your choice, including local models, giving you flexibility and control.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -144,9 +144,9 @@ export const services = [
   },
   {
     id: 4,
-    title: 'Smart Chat Management',
+    title: "Smart Chat Management",
     description:
-      'Automated chat titles and efficient conversation management help you stay organized and focused on what matters.',
+      "Automated chat titles and efficient conversation management help you stay organized and focused on what matters.",
     icon: <FaLaptopCode className="size-8 text-gray-500" />,
     pattern: {
       y: 16,
@@ -158,9 +158,9 @@ export const services = [
   },
   {
     id: 5,
-    title: 'Community & Pro Editions',
+    title: "Community & Pro Editions",
     description:
-      'Choose between the free Community Edition or upgrade to Pro for additional features while enjoying the same core experience.',
+      "Choose between the free Community Edition or upgrade to Pro for additional features while enjoying the same core experience.",
     icon: <BsFillBookmarkCheckFill className="size-8 text-green-500" />,
     pattern: {
       y: -6,
@@ -170,4 +170,4 @@ export const services = [
       ],
     },
   },
-]
+];

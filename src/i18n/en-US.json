@@ -10,25 +10,25 @@
       {
         "question": "What is FlowDown?",
         "answer": "FlowDown is a native AI client built with Swift and UIKit. It provides a lightweight, privacy-focused interface for interacting with various AI language models.\n\nWith its blazing fast text rendering and markdown support, FlowDown delivers a smooth and responsive AI conversation experience.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
         "link_text": "Learn More"
       },
       {
         "question": "Which AI models does FlowDown support?",
         "answer": "We provide free cloud model for every user who downloads FlowDown from the App Store, to offer convenience. You can learn about the service providers in privacy pages. This configuration is controlled by the cloud and cannot be modified.\n\nAdditionally, FlowDown supports enterprise api.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/documents/advanced_settings/enterprise.html",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/advanced_settings/enterprise.html",
         "link_text": "Learn More"
       },
       {
         "question": "Is my data protected?",
         "answer": "Yes, privacy is a core design principle of FlowDown. Your conversations stay on your device by default, and you have complete control over which AI service provider you connect to.\n\nFlowDown is designed to give you ownership of your data while still providing a powerful AI assistant experience.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/documents/privacy_protection/design.html",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html",
         "link_text": "Learn More"
       },
       {
         "question": "What's the difference between Community and Standard Editions?",
         "answer": "FlowDown offers both Community (free) and Standard Editions. The Community Edition provides the core FlowDown experience with essential features.\n\nThe Standard Edition adds additional capabilities while maintaining the same lightweight, privacy-focused approach. Both versions deliver the same high-quality conversation experience with blazing fast text rendering and markdown support.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
         "link_text": "Learn More"
       }
     ]
@@ -43,9 +43,9 @@
   },
   "common": {
     "download_button": "Download @ App Store",
-    "download_link": "https://apps.qaq.wiki/docs/flowdown/documents/app_store.html",
+    "download_link": "https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html",
     "document_link_text": "Read User Guide",
-    "document_link": "https://apps.qaq.wiki/docs/flowdown/documents/welcome.html",
+    "document_link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
     "platform_availability_macOS": "Available on macOS 13.0+ / Supports Apple Silicon & Intel",
     "platform_availability_iOS": "Available on iOS 16.0+ / Supports iPhone & iPad"
   },

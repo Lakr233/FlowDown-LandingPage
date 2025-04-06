@@ -1,4 +1,4 @@
-import { atom } from 'jotai'
+import { atom } from "jotai";
 
 export const viewportAtom = atom({
   /**
@@ -24,8 +24,8 @@ export const viewportAtom = atom({
   /**
    * 1536px
    */
-  '2xl': false,
+  "2xl": false,
 
   h: 0,
   w: 0,
-})
+});
