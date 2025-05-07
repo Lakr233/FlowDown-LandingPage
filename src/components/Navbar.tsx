@@ -81,6 +81,21 @@ export const Navbar = () => {
               whileFocus={{ scale: 1.02 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
+              href={appConfig.app.enterprise}
+              transition={{ type: 'spring', stiffness: 200, damping: 10 }}
+              target="_blank"
+              rel="noreferrer"
+              className="relative flex items-center rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-600 dark:border-zinc-700 dark:text-zinc-300 lg:flex"
+            >
+              <i className="i-mingcute-github-2-fill mr-2 size-4" />
+              {t('add_models_to_flowdown')}
+            </m.a>
+
+            <m.a
+              initial={true}
+              whileFocus={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 200, damping: 10 }}
               href={appConfig.app.download_link}
               target="_blank"

@@ -8,6 +8,8 @@ export const appConfig = {
     github: 'https://github.com/Lakr233/FlowDown-App',
     download_link:
       'https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html',
+    enterprise:
+      'https://apps.qaq.wiki/docs/flowdown/en/documents/advanced_settings/enterprise.html',
   },
 }
 
