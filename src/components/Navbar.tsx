@@ -1,44 +1,44 @@
-import { AnimatePresence, m, useScroll, useTransform } from "framer-motion";
-import { Squash as Hamburger } from "hamburger-react";
-import { useTranslations } from "next-intl";
-import * as React from "react";
-import { useState } from "react";
-import { useIsMobile } from "src/atoms/hooks/viewport";
-import { appConfig } from "src/configs";
-import { usePageScrollLocation } from "src/providers/page-scroll-info-provider";
+import { AnimatePresence, m, useScroll, useTransform } from 'framer-motion'
+import { Squash as Hamburger } from 'hamburger-react'
+import { useTranslations } from 'next-intl'
+import * as React from 'react'
+import { useState } from 'react'
+import { useIsMobile } from 'src/atoms/hooks/viewport'
+import { appConfig } from 'src/configs'
+import { usePageScrollLocation } from 'src/providers/page-scroll-info-provider'
 
-import { CustomLink } from "./CustomLink";
-import { LogoWithText } from "./LogoWithText";
+import { CustomLink } from './CustomLink'
+import { LogoWithText } from './LogoWithText'
 
 export const Navbar = () => {
-  const scrollY = Math.round(usePageScrollLocation());
+  const scrollY = Math.round(usePageScrollLocation())
 
-  const t = useTranslations("navbar");
+  const t = useTranslations('navbar')
 
   const navItems = [
     {
       id: 1,
-      name: t("document"),
-      link: "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
+      name: t('document'),
+      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html',
     },
     {
       id: 2,
-      name: t("pricing"),
-      link: "https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html",
+      name: t('pricing'),
+      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html',
     },
     {
       id: 3,
-      name: t("privacy"),
-      link: "https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html",
+      name: t('privacy'),
+      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html',
     },
     {
       id: 4,
-      name: t("open_source"),
-      link: "/open-source",
+      name: t('open_source'),
+      link: '/open-source',
     },
-  ];
+  ]
 
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile()
 
   return (
     <div className="sticky top-0 z-[99] mx-0 lg:-top-6 lg:px-5">
@@ -67,13 +67,13 @@ export const Navbar = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               href={appConfig.app.github}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 10 }}
               target="_blank"
               rel="noreferrer"
               className="relative flex items-center rounded-full border border-zinc-300 px-5 py-2 text-sm font-semibold text-zinc-600 dark:border-zinc-700 dark:text-zinc-300 lg:flex"
             >
               <i className="i-mingcute-github-2-fill mr-2 size-4" />
-              {t("community_edition")}
+              {t('source_code_button')}
             </m.a>
 
             <m.a
@@ -81,14 +81,14 @@ export const Navbar = () => {
               whileFocus={{ scale: 1.02 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 10 }}
               href={appConfig.app.download_link}
               target="_blank"
               rel="noreferrer"
               className="relative flex items-center rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white lg:flex"
             >
               <i className="i-mingcute-apple-fill mr-2 size-4" />
-              {t("download")}
+              {t('download')}
             </m.a>
           </div>
           <div className="flex lg:hidden">
@@ -97,21 +97,21 @@ export const Navbar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const item = {
   exit: {
     opacity: 0,
     height: 0,
     transition: {
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.3,
       height: { delay: 0.1 },
     },
   },
   show: {
-    height: "auto",
+    height: 'auto',
     opacity: 1,
     transition: {
       duration: 0.3,
@@ -123,15 +123,15 @@ const item = {
     opacity: 0,
     height: 0,
   },
-};
+}
 
 const childItems = {
   hidden: { y: -10, opacity: 0 },
   show: { y: 0, opacity: 1 },
-};
+}
 
 const MobileNav = ({ navItems }: any) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <>
@@ -149,7 +149,7 @@ const MobileNav = ({ navItems }: any) => {
               className="fixed inset-x-0 bottom-0 top-[var(--navbar-height)] z-40 bg-black/20 backdrop-blur-sm dark:bg-black/40"
               style={
                 {
-                  "--navbar-height": "calc(var(--header-height, 60px))",
+                  '--navbar-height': 'calc(var(--header-height, 60px))',
                 } as React.CSSProperties
               }
               onClick={() => setOpen(false)}
@@ -203,8 +203,8 @@ const MobileNav = ({ navItems }: any) => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
 const DesktopNav = ({ navItems }: any) => {
   return (
@@ -219,17 +219,17 @@ const DesktopNav = ({ navItems }: any) => {
         </CustomLink>
       ))}
     </>
-  );
-};
+  )
+}
 
 const BackDrop = () => {
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [30, 150], [0, 1]);
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [30, 150], [0, 1])
 
   return (
     <m.div
       style={{ opacity }}
       className="absolute inset-0 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/80"
     />
-  );
-};
+  )
+}

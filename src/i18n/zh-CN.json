@@ -26,8 +26,8 @@
         "link_text": "了解更多"
       },
       {
-        "question": "社区版和标准版有什么区别？",
-        "answer": "浮望提供免费的社区版和标准版。社区版提供核心浮望体验，包含必要的功能。\n\n标准版在保持相同轻量级、注重隐私的方法的同时，增加了额外的功能。两个版本都提供相同高质量的对话体验，具有极速文本渲染和 Markdown 支持。",
+        "question": "社区版是什么？",
+        "answer": "社区版是浮望的早期版本。随着主程序完整开源，现已弃用。除此之外，社区版本使用更加宽松的 MIT 许可。",
         "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
         "link_text": "了解更多"
       }
@@ -53,7 +53,7 @@
     "document": "文档",
     "pricing": "价格",
     "privacy": "隐私",
-    "community_edition": "社区版",
+    "source_code_button": "获取源码",
     "download": "下载",
     "open_source": "开放源码"
   },

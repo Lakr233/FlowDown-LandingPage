@@ -26,8 +26,8 @@
         "link_text": "Learn More"
       },
       {
-        "question": "What's the difference between Community and Standard Editions?",
-        "answer": "FlowDown offers both Community (free) and Standard Editions. The Community Edition provides the core FlowDown experience with essential features.\n\nThe Standard Edition adds additional capabilities while maintaining the same lightweight, privacy-focused approach. Both versions deliver the same high-quality conversation experience with blazing fast text rendering and markdown support.",
+        "question": "What is the Community Editions?",
+        "answer": "The Community Edition is an early version of FlowDown. It has been deprecated as the main program is now fully open source. Additionally, the Community Edition uses a more permissive MIT license.",
         "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
         "link_text": "Learn More"
       }
@@ -53,7 +53,7 @@
     "document": "Documentation",
     "pricing": "Pricing",
     "privacy": "Privacy",
-    "community_edition": "Community Edition",
+    "source_code_button": "Get Source Code",
     "download": "Download",
     "open_source": "Open Source"
   },
