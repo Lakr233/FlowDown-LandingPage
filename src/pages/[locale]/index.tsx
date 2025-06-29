@@ -11,8 +11,8 @@ const Home: NextPage = () => {
     <Container>
       <Hero />
       <Features />
-      <Team />
       <FAQ />
+      <Team />
     </Container>
   )
 }
