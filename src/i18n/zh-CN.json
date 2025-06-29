@@ -8,27 +8,33 @@
     "title": "常见问题",
     "items": [
       {
-        "question": "什么是浮望？",
-        "answer": "浮望是一个用 Swift 和 UIKit 构建的原生 AI 客户端。它为与各种 AI 语言模型交互提供了轻量级、注重隐私的界面。\n\n凭借其极速的文本渲染和 Markdown 支持，浮望提供流畅响应的 AI 对话体验。",
-        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
-        "link_text": "了解更多"
-      },
-      {
-        "question": "浮望支持哪些 AI 模型？",
-        "answer": "我们为每位从 App Store 下载浮望的用户提供免费的云端模型，以提供便利。您可以在隐私页面了解服务提供商。这个配置由云端控制，无法修改。\n\n此外，浮望支持企业级接口。",
+        "question": "FlowDown 支持哪些AI模型？",
+        "answer": "FlowDown 支持所有兼容 OpenAI API 格式的模型，包括：\n- **内置免费模型**：无需配置即可使用\n- **主流服务商**：OpenAI、Claude (通过 OpenRouter)、阿里云、字节跳动等\n- **本地模型**：支持 Ollama 和 MLX 本地部署\n- **自定义接口**：任何兼容 OpenAI API 的服务",
         "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/advanced_settings/enterprise.html",
         "link_text": "了解更多"
       },
       {
-        "question": "我的数据受到保护吗？",
-        "answer": "是的，隐私是浮望的核心设计原则。默认情况下，您的对话会保留在设备上，您可以完全控制要连接的 AI 服务提供商。\n\n浮望旨在让您掌控自己的数据，同时仍提供强大的 AI 助手体验。",
+        "question": "FlowDown 支持哪些平台？",
+        "answer": "FlowDown 提供全平台原生应用支持：\n- **macOS**：完整功能的桌面应用\n- **iOS**：针对 iPhone 优化的移动应用\n- **iPadOS**：适配 iPad 的平板应用\n\n所有版本均为原生应用，非 Web 技术，确保最佳性能和用户体验",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/app_store.html",
+        "link_text": "了解更多"
+      },
+      {
+        "question": "FlowDown 的工具调用功能如何使用？",
+        "answer": "FlowDown 支持强大的工具调用（Tool Call）功能：\n- **联网搜索**：实时获取最新信息\n- **文档处理**：分析和处理各类文件\n\n建议使用 Gemini Flash 等模型以获得最佳工具调用体验",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/advanced/tool_call.html",
+        "link_text": "了解更多"
+      },
+      {
+        "question": "数据安全和隐私如何保障？",
+        "answer": "- **本地存储**：所有对话数据存储在您的设备上\n- **无数据收集**：FlowDown 不收集或存储您的对话内容\n- **直连模型**：直接与AI服务商通信，无中间代理\n- **开源透明**：代码开源，确保透明度",
         "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/privacy_protection/design.html",
         "link_text": "了解更多"
       },
       {
-        "question": "社区版是什么？",
-        "answer": "社区版是浮望的早期版本。随着主程序完整开源，现已弃用。除此之外，社区版本使用更加宽松的 MIT 许可。",
-        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
+        "question": "如何获取和配置模型？",
+        "answer": "- **零配置使用**：内置免费模型，下载即用\n- **自定义配置**：支持添加自己的 API 密钥\n- **导入导出**：支持模型配置的导入导出\n- **技术支持**：提供详细的配置指南和社区支持",
+        "link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/quickstart/cloud_models.html",
         "link_text": "了解更多"
       }
     ]
@@ -37,6 +43,44 @@
     "hero1": "你可以拥有的",
     "hero2": "AI 体验",
     "hero3": "你可以拥有一份专属的 AI 体验。即使没有我们的参与，也会一直工作。"
+  },
+  "features": {
+    "title": "为什么选择浮望",
+    "subtitle": "探索让浮望成为终极 AI 伴侣的强大功能",
+    "items": [
+      {
+        "title": "轻量且高效",
+        "description": "紧凑设计，无缝性能"
+      },
+      {
+        "title": "Markdown 支持",
+        "description": "丰富格式化文本响应"
+      },
+      {
+        "title": "通用兼容性",
+        "description": "支持所有 OpenAI 兼容服务"
+      },
+      {
+        "title": "极速文本渲染",
+        "description": "不会因卡顿丢失关注焦点"
+      },
+      {
+        "title": "自动聊天标题",
+        "description": "简化对话，提高生产力"
+      },
+      {
+        "title": "自动聊天模板",
+        "description": "智能生成可重用对话模板"
+      },
+      {
+        "title": "隐私优先设计",
+        "description": "我们不收集您的数据"
+      },
+      {
+        "title": "开源",
+        "description": "您可以亲自验证承诺"
+      }
+    ]
   },
   "footer": {
     "copyright": "© 2025 浮望 团队。保留所有权利。"

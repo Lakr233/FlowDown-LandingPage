@@ -8,27 +8,33 @@
     "title": "Frequently Asked Questions",
     "items": [
       {
-        "question": "What is FlowDown?",
-        "answer": "FlowDown is a native AI client built with Swift and UIKit. It provides a lightweight, privacy-focused interface for interacting with various AI language models.\n\nWith its blazing fast text rendering and markdown support, FlowDown delivers a smooth and responsive AI conversation experience.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
-        "link_text": "Learn More"
-      },
-      {
         "question": "Which AI models does FlowDown support?",
-        "answer": "We provide free cloud model for every user who downloads FlowDown from the App Store, to offer convenience. You can learn about the service providers in privacy pages. This configuration is controlled by the cloud and cannot be modified.\n\nAdditionally, FlowDown supports enterprise api.",
+        "answer": "FlowDown supports all models compatible with OpenAI API format, including:\n- **Built-in free models**: Ready to use without configuration\n- **Major service providers**: OpenAI, Claude (via OpenRouter), Alibaba Cloud, ByteDance, etc.\n- **Local models**: Support for Ollama and MLX local deployment\n- **Custom interfaces**: Any service compatible with OpenAI API",
         "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/advanced_settings/enterprise.html",
         "link_text": "Learn More"
       },
       {
-        "question": "Is my data protected?",
-        "answer": "Yes, privacy is a core design principle of FlowDown. Your conversations stay on your device by default, and you have complete control over which AI service provider you connect to.\n\nFlowDown is designed to give you ownership of your data while still providing a powerful AI assistant experience.",
+        "question": "Which platforms does FlowDown support?",
+        "answer": "FlowDown provides native app support across all platforms:\n- **macOS**: Full-featured desktop application\n- **iOS**: Mobile app optimized for iPhone\n- **iPadOS**: Tablet app adapted for iPad\n\nAll versions are native applications, not web-based, ensuring optimal performance and user experience",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html",
+        "link_text": "Learn More"
+      },
+      {
+        "question": "How to use FlowDown's tool calling features?",
+        "answer": "FlowDown supports powerful Tool Call functionality:\n- **Web search**: Real-time access to latest information\n- **Document processing**: Analyze and process various file types\n\nWe recommend using models like Gemini Flash for the best tool calling experience",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/advanced/tool_call.html",
+        "link_text": "Learn More"
+      },
+      {
+        "question": "How is data security and privacy ensured?",
+        "answer": "- **Local storage**: All conversation data is stored on your device\n- **No data collection**: FlowDown does not collect or store your conversation content\n- **Direct connection**: Communicates directly with AI service providers without intermediaries\n- **Open source transparency**: Code is open source to ensure transparency",
         "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html",
         "link_text": "Learn More"
       },
       {
-        "question": "What is the Community Editions?",
-        "answer": "The Community Edition is an early version of FlowDown. It has been deprecated as the main program is now fully open source. Additionally, the Community Edition uses a more permissive MIT license.",
-        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
+        "question": "How to obtain and configure models?",
+        "answer": "- **Zero configuration**: Built-in free models, ready to use after download\n- **Custom configuration**: Support for adding your own API keys\n- **Import/Export**: Support for importing and exporting model configurations\n- **Technical support**: Provides detailed configuration guides and community support",
+        "link": "https://apps.qaq.wiki/docs/flowdown/en/documents/quickstart/cloud_models.html",
         "link_text": "Learn More"
       }
     ]
@@ -37,6 +43,44 @@
     "hero1": "AI That Works",
     "hero2": "Even Without Us",
     "hero3": "You can OWN a blazing fast and smooth Agent app. Switch between your AI services or use local models on your device."
+  },
+  "features": {
+    "title": "Why Choose FlowDown",
+    "subtitle": "Discover the powerful features that make FlowDown the ultimate AI companion",
+    "items": [
+      {
+        "title": "Lightweight and Efficient",
+        "description": "Compact design for seamless performance"
+      },
+      {
+        "title": "Markdown Support",
+        "description": "Rich formatted text in responses"
+      },
+      {
+        "title": "Universal Compatibility",
+        "description": "Works with all OpenAI compatible services"
+      },
+      {
+        "title": "Blazing Fast Text Rendering",
+        "description": "Never lose focus due to interface lag"
+      },
+      {
+        "title": "Automated Chat Titles",
+        "description": "Streamlines conversations and productivity"
+      },
+      {
+        "title": "Automated Chat Templates",
+        "description": "Smart templates for reusable conversations"
+      },
+      {
+        "title": "Privacy by Design",
+        "description": "We don't collect your data"
+      },
+      {
+        "title": "Open Sourced",
+        "description": "You can verify our promise in person"
+      }
+    ]
   },
   "footer": {
     "copyright": "© 2025 FlowDown Team. All rights reserved."

@@ -14,7 +14,7 @@ interface Faq {
 export const FAQ = () => {
   const t = useTranslations('faq')
 
-  const faqs: Faq[] = Array.from({ length: 4 }, (_, i) => ({
+  const faqs: Faq[] = Array.from({ length: 5 }, (_, i) => ({
     question: t(`items.${i}.question`),
     answer: t(`items.${i}.answer`),
     link: t(`items.${i}.link`),
