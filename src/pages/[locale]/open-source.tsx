@@ -36,6 +36,44 @@ type OpenSource = {
 const openSourceProjects: OpenSource = [
   {
     id: 1,
+    title: 'FlowDown',
+    description:
+      'FlowDown is a blazing fast and smooth client app for using AI/LLM with full protection of your privacy.',
+    content: `
+  ## Key Features
+  
+  - **⚡ Lightweight and Efficient**: Compact design for seamless performance
+  - **📝 Markdown Support**: Rich formatted text in responses
+  - **🔗 Universal Compatibility**: Works with all OpenAI compatible service providers
+  - **🚀 Blazing Fast Text Rendering**: Delivers a seamless user experience
+  - **🤖 Automated Chat Titles**: Streamlines conversations and boosts productivity
+  - **📋 Automated Chat Templates**: Use LLM to conclude your request within conversation to chat template for later use
+  - **🔒 Privacy by Design**: We don't collect your data
+  - **📱 Visual LLM Support**: Advanced multimodal capabilities
+  - **🌐 Web Search**: Integrated web search functionality
+  - **📎 Attachments**: File and image attachment support
+  - **🌍 Language Localization**: Multi-language support
+  - **💻 Offline LLM w/ MLX**: Local AI model support
+    `,
+    date: '2025-05-27',
+    link: 'https://github.com/Lakr233/FlowDown',
+    tags: ['Swift', 'AI', 'LLM', 'Privacy', 'Markdown', 'MLX', 'iOS App'],
+    images: [
+      {
+        src: 'https://github.com/Lakr233/FlowDown/blob/main/Resources/SCR-PREVIEW.png?raw=true',
+        alt: 'FlowDown app preview showing AI chat interface',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
+  {
+    id: 2,
     title: 'GlyphixTextFx',
     description:
       "FlowDown's text animation framework. We backported SwiftUI numeric transition features to UIKit for older iOS versions",
@@ -75,7 +113,7 @@ const openSourceProjects: OpenSource = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: 'ConfigurableKit',
     description: 'The simple but yet powerful way to build settings page.',
     content: `
@@ -125,7 +163,7 @@ const openSourceProjects: OpenSource = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: 'AlertController',
     description:
       'A modern, customizable alert controller implementation for iOS and macCatalyst applications.',
@@ -192,7 +230,7 @@ const openSourceProjects: OpenSource = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Litext',
     description: 'Tiny rich-text supporting library for iOS & macOS',
     content: `
@@ -228,7 +266,7 @@ const openSourceProjects: OpenSource = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: 'ScrubberKit',
     description:
       'ScrubberKit is a robust framework designed to scrape and process web content using keywords, transforming complex HTML pages into clean, plain text suitable for AI model consumption.',
@@ -260,7 +298,7 @@ const openSourceProjects: OpenSource = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: 'FlowDown Community',
     description:
       "FlowDown Community serves as the predecessor project of FlowDown, designed to validate core functionalities' feasibility and evaluate competitive positioning within current software market offerings.",
@@ -291,7 +329,113 @@ const openSourceProjects: OpenSource = [
     },
   },
   {
-    id: 7,
+    id: 8,
+    title: 'MarkdownView',
+    description:
+      'A powerful pure UIKit framework for rendering Markdown documents with real-time parsing and rendering capabilities. Battle tested in FlowDown.',
+    content: `
+  ## Key Features
+  
+  - **🚀 Real-time Rendering**: Live Markdown parsing and rendering as you type
+  - **🎨 Syntax Highlighting**: Beautiful code syntax highlighting with Splash
+  - **📊 Math Rendering**: LaTeX math formula rendering with SwiftMath
+  - **📱 iOS Optimized**: Native UIKit implementation for optimal performance
+  - **iOS 13.0+ Support**: Compatible with iOS 13.0+, Mac Catalyst 13.0+
+
+  ### Implementation Example
+
+  \`\`\`swift
+  import MarkdownView
+  import MarkdownParser
+
+  let markdownTextView = MarkdownTextView()
+  let parser = MarkdownParser()
+  let result = parser.parse("# Hello World")
+  markdownTextView.setMarkdown(
+      result.document,
+      theme: .default,
+      mathContent: result.mathContext
+  )
+  \`\`\`
+    `,
+    date: '2025-05-27',
+    link: 'https://github.com/Lakr233/MarkdownView',
+    tags: [
+      'Swift',
+      'UIKit',
+      'Markdown',
+      'Real-time Rendering',
+      'Math Rendering',
+    ],
+    images: [
+      {
+        src: 'https://github.com/Lakr233/MarkdownView/blob/main/Resources/Simulator%20Screenshot%20-%20iPad%20mini%20(A17%20Pro)%20-%202025-05-27%20at%2003.03.27.png?raw=true',
+        alt: 'MarkdownView real-time rendering demo on iPad',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
+  {
+    id: 9,
+    title: 'ListViewKit',
+    description:
+      'A modern, glitch-free UITableView replacement for Swift + UIKit.',
+    content: `
+  ## Key Features
+  
+  - **🌀 No Glitch on contentSize Change**: Instantly adapts to content size changes without any visual glitches
+  - **🛡️ Smooth Scrolling**: User scrolling remains perfectly smooth, even during data updates
+  - **🔄 Live Data Refresh**: Data source can be updated at any time, with immediate and safe UI refresh
+  - **📦 Swift Package Manager**: Easy to integrate into your project using SPM
+  - **iOS 13.0+ Support**: Compatible with iOS 13.0+, macCatalyst 13.0+
+
+  ### Implementation Example
+
+  \`\`\`swift
+  // Define your ViewModel
+  struct ViewModel: Identifiable, Hashable {
+      var id: UUID = .init()
+      var text: String = ""
+      enum RowKind: Hashable {
+          case text
+      }
+  }
+
+  // Create ListView and set up Diffable Data Source
+  let listView = ListView(frame: .zero)
+  let dataSource: ListViewDiffableDataSource<ViewModel> = .init(listView: listView)
+
+  // Apply your data
+  var snapshot = dataSource.snapshot()
+  snapshot.append(ViewModel(text: "Hello ListViewKit"))
+  dataSource.applySnapshot(snapshot, animatingDifferences: true)
+  \`\`\`
+    `,
+    date: '2025-05-22',
+    link: 'https://github.com/Lakr233/ListViewKit',
+    tags: ['Swift', 'UIKit', 'iOS', 'UITableView', 'Swift Package Manager'],
+    images: [
+      {
+        src: 'https://github.com/Lakr233/ListViewKit/blob/main/Resource/IMG_0BBF74B35BFB-1.jpeg?raw=true',
+        alt: 'ListViewKit demo showing smooth scrolling and data updates',
+        width: 800,
+        height: 400,
+      },
+    ],
+    author: {
+      name: '@Lakr233',
+      avatar: '/avatars/lakr.png',
+      link: 'https://github.com/Lakr233',
+    },
+  },
+  {
+    id: 10,
     title: 'FlowDown Landing Page',
     description: 'Finally, the landing page itself, is now open sourced.',
     content: `
