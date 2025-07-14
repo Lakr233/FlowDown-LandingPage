@@ -15,7 +15,7 @@ interface TeamMember {
 export const Team = () => {
   const t = useTranslations('team')
   const teamMembers: TeamMember[] = React.useMemo(() => {
-    return Array.from({ length: 5 }, (_, i) => {
+    return Array.from({ length: 6 }, (_, i) => {
       const member: TeamMember = {
         id: i,
         name: t(`members.${i}.name`),

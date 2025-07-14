@@ -145,6 +145,14 @@
         "image": "/avatars/hwwaanng.png",
         "github": "https://github.com/hwangdev97",
         "twitter": "https://twitter.com/hwwaanng"
+      },
+      {
+        "name": "@at-wr",
+        "role": "技术开发者",
+        "bio": "为热忱所驱，筑浮望蓝图。",
+        "image": "/avatars/at-wr.png",
+        "github": "https://github.com/at-wr",
+        "twitter": "https://twitter.com/Wr_Offi"
       }
     ]
   },

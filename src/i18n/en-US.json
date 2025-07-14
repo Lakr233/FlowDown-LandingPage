@@ -145,6 +145,14 @@
         "image": "/avatars/hwwaanng.png",
         "github": "https://github.com/hwangdev97",
         "twitter": "https://twitter.com/hwwaanng"
+      },
+      {
+        "name": "@at-wr",
+        "role": "Developer",
+        "bio": "Architecting state-of-the-art solutions, driven by passion.",
+        "image": "/avatars/at-wr.png",
+        "github": "https://github.com/at-wr",
+        "twitter": "https://twitter.com/Wr_Offi"
       }
     ]
   },
