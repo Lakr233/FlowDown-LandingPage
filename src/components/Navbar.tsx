@@ -19,17 +19,17 @@ export const Navbar = () => {
     {
       id: 1,
       name: t('document'),
-      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html',
+      link: t('welcome'),
     },
     {
       id: 2,
       name: t('pricing'),
-      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html',
+      link: t('app_store'),
     },
     {
       id: 3,
       name: t('privacy'),
-      link: 'https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html',
+      link: t('privacy_link'),
     },
     {
       id: 4,

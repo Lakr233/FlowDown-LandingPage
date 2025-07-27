@@ -100,7 +100,10 @@
     "source_code_button": "获取源码",
     "add_models_to_flowdown": "添加模型",
     "download": "下载",
-    "open_source": "开放源码"
+    "open_source": "开放源码",
+     "welcome": "https://apps.qaq.wiki/docs/flowdown/zh/documents/welcome.html",
+    "app_store": "https://apps.qaq.wiki/docs/flowdown/zh/documents/app_store.html",
+    "privacy_link": "https://apps.qaq.wiki/docs/flowdown/zh/documents/privacy_protection/design.html"
   },
   "team": {
     "title": "团队成员",
