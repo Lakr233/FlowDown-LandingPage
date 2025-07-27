@@ -100,7 +100,10 @@
     "source_code_button": "Get Source Code",
     "add_models_to_flowdown": "Add Models",
     "download": "Download",
-    "open_source": "Open Source"
+    "open_source": "Open Source",
+    "welcome": "https://apps.qaq.wiki/docs/flowdown/en/documents/welcome.html",
+    "app_store": "https://apps.qaq.wiki/docs/flowdown/en/documents/app_store.html",
+    "privacy_link": "https://apps.qaq.wiki/docs/flowdown/en/documents/privacy_protection/design.html"
   },
   "team": {
     "title": "Meet the Team",
